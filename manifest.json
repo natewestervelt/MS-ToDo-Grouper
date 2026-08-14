@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Microsoft To Do Grouper",
+  "version": "0.1.0",
+  "description": "Group Microsoft To Do tasks by project ($), person (@), or task type (!).",
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://to-do.office.com/*",
+        "https://to-do.microsoft.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "styles.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
